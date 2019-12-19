@@ -12,7 +12,7 @@ class Test2 {
 
 	public void performGetOperation() {
 		RestAssured.baseURI = "https://reqres.in/api/users?page=2";
-		RequestSpecification httpReq = RestAssured.given();
+		RequestSpecification  httpReq = RestAssured.given();
 		Response response = httpReq.request(Method.GET, "");
 		System.out.println(response.getBody().asString());
 		System.out.println(response.getHeader("content-type"));
