@@ -17,7 +17,7 @@ class Test2 {
 		System.out.println(response.getBody().asString());
 		System.out.println(response.getHeader("content-type"));
 		for (Header header : response.getHeaders()) {
-			
+			System.out.println("dhjshfjhashf");
 		}
 	}
 
