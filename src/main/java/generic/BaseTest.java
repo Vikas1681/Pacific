@@ -17,6 +17,7 @@ public class BaseTest {
 	private HashMap<String, String> rowData;
 	private ExcelHelperClass objExcelHelperClass;
 	private JSONObject objJsonObject;
+	private HashMap objHashMap;
 
 	public void setBaseURI() {
 		RestAssured.baseURI = "https://reqres.in/api/users/";
@@ -38,6 +39,7 @@ public class BaseTest {
 	public void setUpEnvironment(String excelFileName) {
 		objExcelHelperClass = new ExcelHelperClass(this);
 		objExcelHelperClass.loadExcelFile(excelFileName);
+		this.initialiseHashmap();
 	}
 
 	public ExcelHelperClass getObjExcelHelperClass() {
@@ -72,7 +74,6 @@ public class BaseTest {
 
 	public void setJsonBody(String key, String value) {
 		this.objJsonObject.put(key, value);
-
 	}
 
 	public void addHeaders(String headerName, String headerValue) {
@@ -81,6 +82,14 @@ public class BaseTest {
 
 	public String convertJsonObectToJsonString() {
 		return this.objJsonObject.toJSONString();
+	}
+
+	public void initialiseHashmap() {
+		this.objHashMap = new HashMap<>();
+	}
+
+	public HashMap getObjHashmap() {
+		return objHashMap;
 	}
 
 }

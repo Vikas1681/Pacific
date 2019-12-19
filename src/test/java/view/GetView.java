@@ -66,5 +66,9 @@ public class GetView {
 	public void convertJsonObectToJsonString() {
 		objBaseTest.convertJsonObectToJsonString();
 	}
+	
+	public void setJsonComplexBody() {
+		
+	}
 
 }
