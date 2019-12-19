@@ -12,7 +12,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class BaseTest {
 
-	private RequestSpecification httpRequest;
+	private  RequestSpecification httpRequest;
 	private Response objResponse;
 	private HashMap<String, String> rowData;
 	private ExcelHelperClass objExcelHelperClass;
